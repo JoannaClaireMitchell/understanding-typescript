@@ -1,23 +1,20 @@
+class Department {
+  name: string;
 
-/**
- * 'unknown' type is another type that can be used when unsure of the type.
- * It is slightly more strict than 'any' and wont allow assignments to other
- * values where the type should be something more specific.
- */
-let userInput: unknown;
-let userName: string;
+  constructor(n: string) {
+    this.name = n;
+  }
 
-userInput = 5;
-userInput = "Max";
-if(typeof userInput === 'string'){
-  userName = userInput
+  // Typescript special - tells the function that 'this' is expected to take the shape of the Department class.
+  describe(this: Department) {
+    console.log("Department: " + this.name);
+  }
 }
 
-/**
- * 'never' is a type that never returns. Something that maybe crashes the app like an Error.
- */
-function generateError(message: string, code: number): never{
-  throw {message, errorCode: code}
-}
+const accounting = new Department("Accounting");
+accounting.describe();
 
-generateError('An error occured!', 500)
+// Illustrates the issue with reassigning methods, and losing 'this' which
+// typescript can catch using the above declaration.
+// const accountingCopy = {describe: accounting.describe};
+// accountingCopy.describe();
