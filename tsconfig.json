@@ -5,7 +5,7 @@
     /* Basic Options */
     // "incremental": true,                         /* Enable incremental compilation */
     "target": "es6" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'. */,
-    "module": "amd" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
+    "module": "es2015" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
     // Telling typescript which apis should be available, given the environment (browser). These are what get set by default if "target" is set to "es6".
     "lib": [
       "dom",
@@ -20,7 +20,7 @@
     // "declarationMap": true,                      /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // If "sourceMap" setting is on, then when debugging in the browser, the original .ts files wll also be shown in the sources tab of devtools.
     // "sourceMap": true,                           /* Generates corresponding '.map' file. */
-    "outFile": "./dist/bundle.js" /* Concatenate and emit output to single file. */,
+    // "outFile": "./dist/bundle.js" /* Concatenate and emit output to single file. */,
     "outDir": "./dist" /* Redirect output structure to the directory. */,
     "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
     // "composite": true,                           /* Enable project compilation */
